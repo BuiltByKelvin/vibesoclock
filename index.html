@@ -1,0 +1,3967 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Vibe's O'clock | Complete Restaurant Website</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='50%' font-size='70' text-anchor='middle' dy='.35em' fill='%23D4A017'>🍽️</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-main">VIBES O'CLOCK</div>
+          <div class="logo-sub">RESTAURANT</div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#all-sections">Full Menu</a></li>
+          <li><a href="#drinks-section">Drinks</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact-faq">Contact</a></li>
+          <li>
+            <a
+              href="https://www.#######.com/"
+              class="mobile-menu-btn"
+              target="_blank"
+              >Book a Table</a
+            >
+          </li>
+        </ul>
+        <div class="right-group">
+          <div class="cart-icon" id="cartIcon">
+            <i class="fas fa-shopping-cart"></i
+            ><span class="cart-count" id="cartCount">0</span>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+          <a
+            href="https://www.#######.com/"
+            class="btn desktop-btn"
+            target="_blank"
+            >Book a Table</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Cart Panel -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-panel" id="cartPanel">
+      <div class="cart-header">
+        <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+        <div id="closeCart">&times;</div>
+      </div>
+      <div id="cartItemsList"></div>
+      <div class="cart-summary">
+        <p><span>Subtotal:</span><span id="subtotal">₦0</span></p>
+        <p><span>Delivery fee:</span><span>₦1,000</span></p>
+        <p><span>Total:</span><span id="totalWithDelivery">₦0</span></p>
+        <div class="delivery-time">
+          <i class="far fa-clock"></i> Est. delivery: 45-60 min
+        </div>
+      </div>
+      <div class="order-options">
+        <label>Order via:</label>
+        <div class="order-buttons">
+          <button id="orderWhatsAppBtn" class="btn whatsapp-btn">
+            WhatsApp
+          </button>
+          <button id="orderAdminBtn" class="btn admin-btn">Admin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide active">
+          <img src="hero.png" alt="Restaurant" />
+        </div>
+        <div class="hero-slide">
+          <img src="hero3.png" alt="Dining" />
+        </div>
+        <div class="hero-slide">
+          <img src="hero6.png" alt="Bar" />
+        </div>
+        <div class="hero-slide">
+          <img src="hero2.png" alt="Food" />
+        </div>
+        <div class="hero-slide">
+          <img src="hero4.png" alt="Ambiance" />
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Experience Luxury Dining & Nightlife</h1>
+        <p>
+          Premium meals, signature cocktails, and unforgettable moments at
+          Vibe's O'clock.
+        </p>
+        <div class="hero-buttons">
+          <a href="#all-sections" class="btn">Explore Full Menu</a>
+          <a href="https://www.########/" class="btn-outline">Book a Table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ALL 21 STATIC MENU SECTIONS ========== -->
+    <div id="all-sections">
+      <!-- 1. Pasta & Noodles -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Pasta & Noodles</h2>
+        </div>
+
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="afradocreamypasta.jpg"
+                alt="Creamy Alfredo Pasta"
+              />
+              <div class="card-content">
+                <h3>Creamy Alfredo Pasta</h3>
+                <p>
+                  Fettuccine in rich parmesan cream sauce with grilled chicken
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦8500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Creamy Alfredo Pasta"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="spaghettiandstew.jpg"
+                alt="Spaghetti Bolognaise"
+              />
+              <div class="card-content">
+                <h3>Spaghetti Bolognaise</h3>
+                <p>
+                  Savory Jackie Noodles mixed with fresh veggies and bold flavor
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Spaghetti Bolognaise"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="creamyspaghetti.jpg"
+                alt="Creamy Alfredo Pasta"
+              />
+              <div class="card-content">
+                <h3>Creamy Spaghetti Bolognese</h3>
+                <p>Rich spaghetti in a smooth, creamy Bolognese sauce</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦8500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Creamy Alfredo Pasta"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="jollofspaghetti.jpg"
+                alt="Creamy Alfredo Pasta"
+              />
+              <div class="card-content">
+                <h3>Spaghetti Jollof</h3>
+                <p>
+                  Rich, smoky jollof Spaghetti packed with rich flavor in every
+                  bite
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦8500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Creamy Alfredo Pasta"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="boilednoodles.jpg"
+                alt="Creamy Alfredo Pasta"
+              />
+              <div class="card-content">
+                <h3>Noodles and Boiled Egg</h3>
+                <p>Perfectly boiled and ready to joy</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦8500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Creamy Alfredo Pasta"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="jackienoodle.jpg"
+                alt="Spaghetti Bolognaise"
+              />
+              <div class="card-content">
+                <h3>Jackie Noodles</h3>
+                <p>
+                  Savory Jackie Noodles mixed with fresh veggies and bold flavor
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Spaghetti Bolognaise"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="singaporenoodles.jpg"
+                alt="Spaghetti Bolognaise"
+              />
+              <div class="card-content">
+                <h3>Singapore Noodles</h3>
+                <p>
+                  Stir-fried Singapore Noodles with fresh veggies and bold Asian
+                  flavor
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Spaghetti Bolognaise"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="prawnpasta.jpg"
+                alt="Chow Mein Noodles"
+              />
+              <div class="card-content">
+                <h3>Prawn Pasta</h3>
+                <p>
+                  Juicy prawns tossed in rich pasta with fresh veggies and bold
+                  flavor
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Chow Mein Noodles"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="spaghettiandstew.jpg"
+                alt="Spaghetti & Stew"
+              />
+              <div class="card-content">
+                <h3>Spaghetti & Stew</h3>
+                <p>Delicious spaghetti served with rich flavorful stew</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Chow Mein Noodles"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Salads -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Salads</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="avacadosalad.jpg"
+                alt="Avocado Salad"
+              />
+              <div class="card-content">
+                <h3>Avocado Salad</h3>
+                <p>
+                  Fresh avocado salad with crisp veggies and creamy dressing
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Caesar Salad"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="chickenceasersalad.jpg"
+                alt="Chicken Caerser Salad"
+              />
+              <div class="card-content">
+                <h3>Chicken Caerser Salad</h3>
+                <p>
+                  Grilled chicken Caesar salad with fresh lettuce, parmesan
+                  chesse, crouton, and creamy caesar dressing
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5200</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Greek Salad"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="coleslaw.jpg" alt="Coleslaw Salad" />
+              <div class="card-content">
+                <h3>Coleslaw Salad</h3>
+                <p>
+                  Fresh creamy coleslaw made with carrot, crunchy cabbage and
+                  rich salad dressing
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5200</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Greek Salad"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="crabsticksalad.jpg"
+                alt="Crab Saladd"
+              />
+              <div class="card-content">
+                <h3>Crab Salad</h3>
+                <p>
+                  Fresh crab salad mixed with crisp veggies and creamy dressing
+                  for a light, flavorful taste
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5200</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Greek Salad"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="vegetablesaladwithavacado.jpg"
+                alt="vegetable salad with avacado"
+              />
+              <div class="card-content">
+                <h3>Avocado Vegetable Salad</h3>
+                <p>
+                  Fresh avocado salad blended with crunchy vegetables and a
+                  light creamy dressing
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5200</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Avocado Vegetable Salad"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="greeksalad.jpg" alt="Greek Salad" />
+              <div class="card-content">
+                <h3>Greek Salad</h3>
+                <p>Cucumbers, tomatoes, olives, feta, oregano vinaigrette</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5200</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Greek Salad"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="vegetablesalad.jpg"
+                alt="Vegetable Salad"
+              />
+              <div class="card-content">
+                <h3>Vegetable Salad</h3>
+                <p>
+                  Fresh vegetable salad with crip garden veggies and light
+                  dressing for a healthy, refreshing taste
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5200</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Greek Salad"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="mexicansalad.jpg" alt="Greek Salad" />
+              <div class="card-content">
+                <h3>Mexican Salad</h3>
+                <p>
+                  Fresh Mexican salad with beans, corn, veggies and a zesty
+                  dressing
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5200</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Greek Salad"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="tunasalad.jpg" alt="Greek Salad" />
+              <div class="card-content">
+                <h3>Tuna Salad</h3>
+                <p>
+                  Fresh tuna salad with crisp vegetable and creamy dressing for
+                  a light, tasty bite
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5200</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Greek Salad"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="shrimpsavacodoacossalad.jpg"
+                alt="Shrimps Salad"
+              />
+              <div class="card-content">
+                <h3>Shrimps Avocado Taco Salad</h3>
+                <p>
+                  Fresh shrimp and avocado taco salad with crips veggies,
+                  cheese, and zesty dressing
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Fruit Salad"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 3. Burgers -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Burgers</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="americastyleburger.jpg"
+                alt="Classic Cheeseburger"
+              />
+              <div class="card-content">
+                <h3>America Style Burger</h3>
+                <p>Beef patty, cheddar, lettuce, tomato, special sauce</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦11000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Classic Cheeseburger"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="doubledeckerburger.jpg"
+                alt="Double Decker Burger"
+              />
+              <div class="card-content">
+                <h3>Double Decker Burger</h3>
+                <p>
+                  Double layered beef stacked with cheese, fresh veggies, and
+                  special sauce
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Chicken Burger"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="chicken.jpg"
+                alt="Crispy Fried Chicken Burger"
+              />
+              <div class="card-content">
+                <h3>Crispy Fried Chicken Burger</h3>
+                <p>
+                  Crispy fried chicken burger with fresh veggies and creamy
+                  sauce, serve with French fries
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Chicken Burger"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="beefburger.jpg" alt="Beef Burger" />
+              <div class="card-content">
+                <h3>Beef Burger</h3>
+                <p>Juicy beef burger served with crispy golden French fries</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Chicken Burger"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="classiccheeseburger.jpg"
+                alt="Classic  Cheeseburger"
+              />
+              <div class="card-content">
+                <h3>Classic Cheeseburger</h3>
+                <p>
+                  Classic beef burger topped with melted cheese and fresh
+                  veggies
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦1000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Veggie Burger"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 4. Main Course -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Main Course</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="chickenpopcorn.jpg"
+                alt="Grilled Lamb Chops"
+              />
+              <div class="card-content">
+                <h3>Chicken Popcorn</h3>
+                <p>Herb-marinated lamb, rosemary jus, roasted vegetables</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦18500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Grilled Lamb Chops"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="shrimpspopcorn.jpg" alt="Beef Steak" />
+              <div class="card-content">
+                <h3>Shrimps Popcorn</h3>
+                <p>300g angus ribeye, garlic butter, mashed potatoes</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦19500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Beef Steak"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="shrimpsstirfriedrice.jpg"
+                alt="Chicken Cordon Bleu"
+              />
+              <div class="card-content">
+                <h3>Shrimps Stired-fried Rice</h3>
+                <p>Breaded chicken with ham and cheese, creamy sauce</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦12500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Chicken Cordon Bleu"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="jollofrice.jpg" alt="Vegetable Soup" />
+              <div class="card-content">
+                <h3>Jollof Rice</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="friedrice.jpeg" alt="Vegetable Soup" />
+              <div class="card-content">
+                <h3>Fried Rice</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="chickenstired.jpeg"
+                alt="Vegetable Soup"
+              />
+              <div class="card-content">
+                <h3>Chicken Stired-Fried Rice Soup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="beefstirfried.jpg"
+                alt="Vegetable Soup"
+              />
+              <div class="card-content">
+                <h3>Beef Stired-fried Rice Soup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="jambalayarice.jpg"
+                alt="Vegetable Soup"
+              />
+              <div class="card-content">
+                <h3>Jambalaya Rice Soup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="pine.jpg" alt="Vegetable Soup" />
+              <div class="card-content">
+                <h3>Pineapple Rice</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="asunjollof.jpg" alt="Vegetable Soup" />
+              <div class="card-content">
+                <h3>Asun Jollof Rice</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 5. Oriental Rice with Turkey -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Oriental Rice with Turkey</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="vocspecialrice.jpg"
+                alt="Oriental Rice & Turkey"
+              />
+              <div class="card-content">
+                <h3>Oriental Rice & Turkey</h3>
+                <p>Fragrant spiced rice, tender turkey, stir-fried veggies</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦9500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Oriental Rice & Turkey"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 6. Wraps -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Wraps</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="chickenshawamaa.JPG"
+                alt="Chicken Shawarma"
+              />
+              <div class="card-content">
+                <h3>Chicken Shawarma</h3>
+                <p>
+                  Grilled chicken, shawarma wrapped with fresh veggies and
+                  creamy sauce
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Chicken Wrap"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="shawamaa.JPG" alt="Beef Shawarma" />
+              <div class="card-content">
+                <h3>Beef Shawarma</h3>
+                <p>
+                  Tender beef shawarma wrapped with freh veggies and creamy
+                  sauce
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Veggie Wrap"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="shawamarandchips.jpg"
+                alt="Mix Shawarma"
+              />
+              <div class="card-content">
+                <h3>Chicken & French fries In Shawarma Wrap</h3>
+                <p>
+                  Chicken and crispy French fries wrapped in a creamy shawarma
+                  roll
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Veggie Wrap"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 7. Pastries -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Pastries</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img class="card-img" src="pancake.jpg" alt="Pancake" />
+              <div class="card-content">
+                <h3>Pancake</h3>
+                <p>Soft fluffy pancakes served warm and delicious</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Croissant"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="springroll.jpg" alt="Spring Roll" />
+              <div class="card-content">
+                <h3>Spring Rolls</h3>
+                <p>Crispy spring rolls filled with tasty savory goodness</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Croissant"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="samosa.jpg" alt="Samosa" />
+              <div class="card-content">
+                <h3>Samosa</h3>
+                <p>
+                  Crispy golden samosas filled with flavorful savory stuffing,
+                  serve with pepper sauce or chilli sauce
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Croissant"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="mixofsamosaandspringroll.jpg"
+                alt="Mix Of Spring Rolls And Samosa"
+              />
+              <div class="card-content">
+                <h3>Mix Of Spring Rolls And Samosa</h3>
+                <p>serve with pepper sauce or chilli sauce</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦8500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Croissant"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="meatpie.jpg" alt="Pancake" />
+              <div class="card-content">
+                <h3>Meat Pie</h3>
+                <p>Flaky meat pie stuffed with rich savory filling</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Croissant"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="chickenpie.jpg" alt="Chicken Pie" />
+              <div class="card-content">
+                <h3>Chicken Pie</h3>
+                <p>Flaky meat pie stuffed with rich savory filling</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦2800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Danish Pastry"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 8. Nachos -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Nachos</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="nass.jpg"
+                alt="Nacho Chips  And Tacos"
+              />
+              <div class="card-content">
+                <h3>Beef Nachos</h3>
+                <p>Delicious spaghetti served with rich flavorful stew</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Cheese Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="frenchfries.jpg" alt="French Fries" />
+              <div class="card-content">
+                <h3>French Fries</h3>
+                <p>Crispy golden French fries served hot and tasty</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="clubsandwish.jpg"
+                alt="Club Sandwich"
+              />
+              <div class="card-content">
+                <h3>Club Sandwich</h3>
+                <p>
+                  Toastedd club sandwich layered with chicken, veggies and
+                  creamy spread
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="chickencurry.jpg" alt="Curry Sauce" />
+              <div class="card-content">
+                <h3>Chicken Curry Sauce</h3>
+                <p>
+                  Tender chicken in rich curry sauce served with egg or white
+                  rice
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="creamymushroom.jpg"
+                alt="Creamy Of Mushroom Soup"
+              />
+              <div class="card-content">
+                <h3>Cream Of Mushroom Soup</h3>
+                <p>Served with burger or Lebanese bread</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦12800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  <div class="card">
+              <img
+                class="card-img"
+                src="./nah, pas, wrp/voc jollof.jpg"
+                alt="VOC Jollof"
+              />
+              <div class="card-content">
+                <h3>VOC Jollof</h3>
+                <p>
+                  Smoky party-style jollof rice served with rich flavors and
+                  signature Vibes O'clock spice
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦12800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+ -->
+            <div class="card">
+              <img class="card-img" src="yamporride.jpg" alt="Yam Porridge" />
+              <div class="card-content">
+                <h3>Yam Porridge</h3>
+                <p>
+                  Rich and hearty yam porridge cooked with flavorful spices and
+                  fresh ingredient
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦12800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="porridebeans.jpg"
+                alt="Beans Porridge"
+              />
+              <div class="card-content">
+                <h3>Beans Porridge</h3>
+                <p>
+                  Porridge beans cooked with rich spices and tasty flavor, serve
+                  with ice fish or merluza
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦12800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="villageoilrice.jpg"
+                alt="Village Oil Rice"
+              />
+              <div class="card-content">
+                <h3>Village Oil Rice</h3>
+                <p>
+                  Traditional village oil rice cooked with palm oil, spices and
+                  rich local flavor
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦12800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  <div class="card">
+              <img
+                class="card-img"
+                src="./nah, pas, wrp/asun jollof.JPG"
+                alt="Asun Jollof "
+              />
+              <div class="card-content">
+                <h3>Asun Jollof</h3>
+                <p>
+                  Smoky Jollof rice mix with tender goat meat and rich flavor
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦12800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="card">
+              <img class="card-img" src="ghanawaaky.jpg" alt="Ghana Waakye" />
+              <div class="card-content">
+                <h3>Ghana Waakye</h3>
+                <p>
+                  Authentic Ghana waakye with rich spices, beans and flavourful
+                  sides, served with goat meat and plantain
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦12800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="yamarita.jpg" alt="Yamarita" />
+              <div class="card-content">
+                <h3>Yamarita</h3>
+                <p>
+                  Crispy fried yam balls stuffed with spicy egg sauce and rich
+                  flavor
+                </p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦12800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Loaded Nachos"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 9. Swallow -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Swallow</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img class="card-img" src="amal.jpg" alt="Amala" />
+              <div class="card-content">
+                <h3>Amala</h3>
+                <p>Cassava flour swallow with rich melon seed soup</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Eba & Egusi"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="eba.jpg" alt="Amala & Ewedu" />
+              <div class="card-content">
+                <h3>Eba (Garri)</h3>
+                <p>Yam flour swallow with jute leaf soup and stew</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Amala & Ewedu"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="semovita.jpeg" alt="Semovita" />
+              <div class="card-content">
+                <h3>Semovita</h3>
+                <p>Yam flour swallow with jute leaf soup and stew</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Amala & Ewedu"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="poundoyam.jpeg" alt="Poundo Yam" />
+              <div class="card-content">
+                <h3>Poundo Yam</h3>
+                <p>Yam flour swallow with jute leaf soup and stew</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Amala & Ewedu"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="starch.png" alt="Starch" />
+              <div class="card-content">
+                <h3>Starch</h3>
+                <p>Yam flour swallow with jute leaf soup and stew</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Amala & Ewedu"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="card">
+              <img
+                class="card-img"
+                src="/images/"
+                alt="Amala & Ewedu"
+              />
+              <div class="card-content">
+                <h3>Amala & Ewedu</h3>
+                <p>Yam flour swallow with jute leaf soup and stew</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Amala & Ewedu"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- 10. Soups -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Soups</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img class="card-img" src="egusi.jpg" alt="Egusi Soup" />
+              <div class="card-content">
+                <h3>Egusi Soup</h3>
+                <p>Draw soup with ogbono seeds, assorted meat</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Ogbono Soup"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="seafoodokro.jpg"
+                alt="Seafood Okro Soup"
+              />
+              <div class="card-content">
+                <h3>Seafood Okro Soup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="vegetablesoup.jpg"
+                alt="Vegetable Soup"
+              />
+              <div class="card-content">
+                <h3>Vegetable Soup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="ogbonosoup.jpeg"
+                alt="Vegetable Soup"
+              />
+              <div class="card-content">
+                <h3>Ogbono Soup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="edikako.jpg" alt="Edikan Ikon Soup" />
+              <div class="card-content">
+                <h3>Edikako Soup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="banga.jpg" alt="Banga Soup" />
+              <div class="card-content">
+                <h3>Banga Soup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="fishermansoup.png"
+                alt="Fisherman Soup"
+              />
+              <div class="card-content">
+                <h3>Fisherman Soup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 11. Sides -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Sides</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="plaintainandfriedegg.jpg"
+                alt="Fried Plantain"
+              />
+              <div class="card-content">
+                <h3>Fried Plantain and Egg</h3>
+                <p>Ripe plantain slices, caramelized and crispy</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦2500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Fried Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="boiledyamandegg.jpg"
+                alt="Boiled Yam And Egg Sauce"
+              />
+              <div class="card-content">
+                <h3>Boiled Yam And Egg Sauce</h3>
+                <p>Tender spiced goat meat, grilled or stewed</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Goat Meat"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="friedyamandsauceegg.jpg"
+                alt="Boiled Yam & Egg"
+              />
+              <div class="card-content">
+                <h3>Fried Yam & Egg</h3>
+                <p>Nigerian boiled yam with fried egg</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦3000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Boiled Yam & Egg"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="saucedgoatmeat.jpg"
+                alt="Vegetable Soup"
+              />
+              <div class="card-content">
+                <h3>Asun/Peppered Goat Meat</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="ikwobi.jpg" alt="Nkwobi" />
+              <div class="card-content">
+                <h3>Nkwobi</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 12. Sauced Proteins -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Sauced Proteins</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img class="card-img" src="peppersnail.jpg" alt="Snail" />
+              <div class="card-content">
+                <h3>Snail</h3>
+                <p>Chicken in spicy bell pepper sauce, herbs</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦8500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Peppered Chicken"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="pullbeef.jpg" alt="Pull Beef" />
+              <div class="card-content">
+                <h3>Pull Beef</h3>
+                <p>Smoked goat meat, habanero, onions, yaji spice</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦9500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Asun (Spicy Goat)"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="cowhhead.jpg"
+                alt="Moi Moi & Plantain"
+              />
+              <div class="card-content">
+                <h3>Cow Head</h3>
+                <p>Steamed bean pudding with fried plantain</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Moi Moi & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="smokechicken.jpg"
+                alt="Vegetable Soup"
+              />
+              <div class="card-content">
+                <h3>Smoked Chicken</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="pullchcicken.jpg" alt="Pull Chicken" />
+              <div class="card-content">
+                <h3>Pull Chicken</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="assorted.png" alt="Assorted" />
+              <div class="card-content">
+                <h3>Assorted</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 13. Pepper Soup -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Pepper Soup</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="catfish.jpg"
+                alt="Catfish Pepper Soup"
+              />
+              <div class="card-content">
+                <h3>Catfish Pepper Soup</h3>
+                <p>Nigerian catfish in aromatic spicy broth</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦7000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Catfish Pepper Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="crockerpep.jpg"
+                alt="Mixed Meat Pepper Soup"
+              />
+              <div class="card-content">
+                <h3>Crocker Fish Peppersoup</h3>
+                <p>Beef, tripe, goat meat in hot pepper soup</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦8000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Mixed Meat Pepper Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="turkeypeppersoup.jpg"
+                alt="Vegetable Soup"
+              />
+              <div class="card-content">
+                <h3>Turkey Peppersoup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="chickenpepperssoup.jpg"
+                alt="Vegetable Soup"
+              />
+              <div class="card-content">
+                <h3>Chicken Peppersoup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="goatmeatpeppersoup.jpg"
+                alt="Vegetable Soup"
+              />
+              <div class="card-content">
+                <h3>Goat Meat Peppersoup</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 14. Alta Vibes O'Clock Platter -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Alta Vibes O'Clock Platter</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img class="card-img" src="plater.jpg" alt="VIP Platter" />
+              <div class="card-content">
+                <h3>VIP Platter</h3>
+                <p>Grilled fish, suya skewers, chips, coleslaw, sauces</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦25000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="VIP Platter"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="vocspecial3.jpg"
+                alt="Moi Moi & Plantain"
+              />
+              <div class="card-content">
+                <h3>VOC Fried Rice</h3>
+                <p>Steamed bean pudding with fried plantain</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Moi Moi & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 15. Special Rice Dishes -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Special Rice Dishes</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img class="card-img" src="specialjollof.jpg" alt="Jollof Rice" />
+              <div class="card-content">
+                <h3>Special Jollof Rice</h3>
+                <p>Smoky Nigerian jollof rice with tomato stew</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Jollof Rice"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="specialpine.jpg"
+                alt="Pineapple Rice"
+              />
+              <div class="card-content">
+                <h3>Special Pineapple Rice</h3>
+                <p>Sweet and savory pineapple rice with veggies</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Pineapple Rice"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="specialfriedrice.jpg"
+                alt="Fried Rice"
+              />
+              <div class="card-content">
+                <h3>Special Fried Rice</h3>
+                <p>Stir-fried rice with mixed veggies and egg</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Fried Rice"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="ewa.jpg" alt="Ewagoyin & Plantain" />
+              <div class="card-content">
+                <h3>Ewagoyin & Plantain</h3>
+                <p>Fried plantain with spicy ewagoyin sauce</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Ewagoyin & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="seafoodpineapplerice.jpg"
+                alt="Pineapple Seafood Rice"
+              />
+              <div class="card-content">
+                <h3>Pineapple Seafood Rice</h3>
+                <p>Rice with pineapple, shrimp, calamari, mussels</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦8500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Pineapple Seafood Rice"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 16. Local Breakfast -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Local Breakfast</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img class="card-img" src="akara.jpg" alt="Akara & Pap" />
+              <div class="card-content">
+                <h3>Akara</h3>
+                <p>Bean cakes with millet pap, sugar optional</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦3500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Akara & Pap"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="moimoi.png" alt="Moi Moi & Plantain" />
+              <div class="card-content">
+                <h3>Moi Moi</h3>
+                <p>Steamed bean pudding with fried plantain</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Moi Moi & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="plantain.jpg"
+                alt="Moi Moi & Plantain"
+              />
+              <div class="card-content">
+                <h3>Plantain</h3>
+                <p>Steamed bean pudding with fried plantain</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Moi Moi & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="friedyam.jpg"
+                alt="Moi Moi & Plantain"
+              />
+              <div class="card-content">
+                <h3>Fried Yam</h3>
+                <p>Steamed bean pudding with fried plantain</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Moi Moi & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 17. Dessert -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Dessert</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="lavacake.png"
+                alt="Chocolate Lava Cake"
+              />
+              <div class="card-content">
+                <h3>Chocolate Lava Cake</h3>
+                <p>Warm molten chocolate cake, vanilla ice cream</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Chocolate Lava Cake"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="oatmeal.jpeg"
+                alt="Moi Moi & Plantain"
+              />
+              <div class="card-content">
+                <h3>Oat Meal</h3>
+                <p>Steamed bean pudding with fried plantain</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Moi Moi & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="friutsalad.jpg"
+                alt="Moi Moi & Plantain"
+              />
+              <div class="card-content">
+                <h3>Fruit Salad</h3>
+                <p>Steamed bean pudding with fried plantain</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Moi Moi & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="donut.jpg" alt="Moi Moi & Plantain" />
+              <div class="card-content">
+                <h3>Donghnut</h3>
+                <p>Steamed bean pudding with fried plantain</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Moi Moi & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="cake.jpg" alt="Cheesecake" />
+              <div class="card-content">
+                <h3>Cheesecake</h3>
+                <p>New York style cheesecake with berry compote</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦5000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Cheesecake"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 18. Smoothie -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Smoothie</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img class="card-img" src="mango.jpg" alt="Mango Smoothie" />
+              <div class="card-content">
+                <h3>Mango Smoothie</h3>
+                <p>Fresh mango, yogurt, honey, blended smooth</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦3500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Mango Smoothie"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="waterbanana.jpg" alt="Berry Blast" />
+              <div class="card-content">
+                <h3>Water Melon and Banana</h3>
+                <p>Mixed berries, banana, almond milk</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦3800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Berry Blast"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                class="card-img"
+                src="waterme.jpg"
+                alt="Moi Moi & Plantain"
+              />
+              <div class="card-content">
+                <h3>Water Melon Smoothie</h3>
+                <p>Steamed bean pudding with fried plantain</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Moi Moi & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 19. Special Platter -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Special Platter</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img
+                class="card-img"
+                src="vocbirth.jpeg"
+                alt="Birthday Platter"
+              />
+              <div class="card-content">
+                <h3>Birthday Platter</h3>
+                <p>Cake slice, party jollof, chicken, small chops</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦15000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Birthday Platter"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="voccouple.jpg" alt="Couples Platter" />
+              <div class="card-content">
+                <h3>Couples Platter</h3>
+                <p>Romantic setup: steak, wine, chocolate fondue</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦18000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Couples Platter"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="vocpla.jpg"
+                alt="VOC Naija Party Platter"
+              />
+              <div class="card-content">
+                <h3>VOC Naija Party Platter</h3>
+                <p>Large tray of jollof, suya, peppered gizzard, drinks</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦22000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="VOC Naija Party Platter"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 20. Soft Drinks -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Soft Drinks</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img class="card-img" src="chi.png" alt="Chi Exotic" />
+              <div class="card-content">
+                <h3>Chi Exotic</h3>
+                <p>Tropical fruit drink</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦1200</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Chi Exotic"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="holla.png" alt="Holladia Yoghurt" />
+              <div class="card-content">
+                <h3>Holladia Yoghurt</h3>
+                <p>Creamy drinkable yoghurt</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦1500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Holladia Yoghurt"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="coke.png" alt="Coca-Cola" />
+              <div class="card-content">
+                <h3>Coca-Cola</h3>
+                <p>Chilled classic cola</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦800</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Coca-Cola"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="water.jpeg" alt="Water" />
+              <div class="card-content">
+                <h3>Water</h3>
+                <p>Pure bottled water</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦500</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Water"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="power.png" alt="Vegetable Soup" />
+              <div class="card-content">
+                <h3>Power Horse</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img" src="blast.jpg" alt="Moi Moi & Plantain" />
+              <div class="card-content">
+                <h3>Berry Blast</h3>
+                <p>Steamed bean pudding with fried plantain</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦4000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Moi Moi & Plantain"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 21. Wines -->
+      <section class="dishes">
+        <div class="section-title">
+          <span>Delights</span>
+          <h2>Wines</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="slider-track">
+            <div class="card">
+              <img class="card-img" src="martinirose.jpg" alt="Martini" />
+              <div class="card-content">
+                <h3>Martini</h3>
+                <p>Full-bodied red wine</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦18000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Merlot"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="escujorojo.jpeg"
+                alt="Sauvignon Blanc"
+              />
+              <div class="card-content">
+                <h3>Escudo Rojo</h3>
+                <p>Crisp white wine</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦16000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #2ecc71; color: #000"
+                      >Available</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Sauvignon Blanc"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="carlorossi.jpg" alt="Rosé" />
+              <div class="card-content">
+                <h3>Carlo Rossi</h3>
+                <p>Light pink, fruity</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦15000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i class="fav-icon far fa-heart" data-name="Rosé"></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="sweetkiss.jpeg" alt="Vegetable Soup" />
+              <div class="card-content">
+                <h3>Sweet Kiss</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="agorwine.jpeg" alt="Vegetable Soup" />
+              <div class="card-content">
+                <h3>Agor Wine</h3>
+                <p>Ugu leaves, waterleaf, spinach with assorted fish</p>
+                <div class="card-actions-row">
+                  <div class="price-badge">
+                    <span class="price">₦6000</span
+                    ><span
+                      class="availability-badge"
+                      style="background: #e74c3c; color: #fff"
+                      >Out of Stock</span
+                    >
+                  </div>
+                  <div class="action-icons">
+                    <i
+                      class="fav-icon far fa-heart"
+                      data-name="Vegetable Soup"
+                    ></i
+                    ><button class="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Milkshakes, Cocktails, Mocktails Section -->
+    <section class="dishes" id="drinks-section">
+      <div class="section-title">
+        <span>Thirst Quenchers</span>
+        <h2>Milkshakes · Cocktails · Mocktails</h2>
+      </div>
+      <div class="carousel-container">
+        <div class="slider-track" id="drinksTrack">
+          <div class="card">
+            <img
+              class="card-img"
+              src="largemilkshake.jpg"
+              alt="Velvet Vanilla Shake"
+            />
+            <div class="card-content">
+              <h3>Large MilkShake</h3>
+              <p>Creamy vanilla bean milkshake with whipped cream</p>
+              <div class="card-actions-row">
+                <div class="price-badge">
+                  <span class="price">₦4500</span
+                  ><span
+                    class="availability-badge"
+                    style="background: #2ecc71; color: #000"
+                    >Available</span
+                  >
+                </div>
+                <div class="action-icons">
+                  <i
+                    class="fav-icon far fa-heart"
+                    data-name="Velvet Vanilla Shake"
+                  ></i
+                  ><button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img"
+              src="oreomilkshake.jpg"
+              alt="Choco Fudge Shake"
+            />
+            <div class="card-content">
+              <h3>Oreo MilkShake</h3>
+              <p>Rich chocolate shake with fudge drizzle</p>
+              <div class="card-actions-row">
+                <div class="price-badge">
+                  <span class="price">₦4800</span
+                  ><span
+                    class="availability-badge"
+                    style="background: #2ecc71; color: #000"
+                    >Available</span
+                  >
+                </div>
+                <div class="action-icons">
+                  <i
+                    class="fav-icon far fa-heart"
+                    data-name="Choco Fudge Shake"
+                  ></i
+                  ><button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img"
+              src="strawberrymilkshake.jpg"
+              alt="Large Vanilla Milkshake"
+            />
+            <div class="card-content">
+              <h3>Strawberry Milkshake</h3>
+              <p>Fresh strawberry milkshake with real berries</p>
+              <div class="card-actions-row">
+                <div class="price-badge">
+                  <span class="price">₦4700</span
+                  ><span
+                    class="availability-badge"
+                    style="background: #2ecc71; color: #000"
+                    >Available</span
+                  >
+                </div>
+                <div class="action-icons">
+                  <i
+                    class="fav-icon far fa-heart"
+                    data-name="Strawberry Bliss"
+                  ></i
+                  ><button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img"
+              src="bbananamilkshake.jpg"
+              alt="Classic Mojito"
+            />
+            <div class="card-content">
+              <h3>Banana Milkshake</h3>
+              <p>White rum, fresh mint, lime, soda water</p>
+              <div class="card-actions-row">
+                <div class="price-badge">
+                  <span class="price">₦6500</span
+                  ><span
+                    class="availability-badge"
+                    style="background: #2ecc71; color: #000"
+                    >Available</span
+                  >
+                </div>
+                <div class="action-icons">
+                  <i
+                    class="fav-icon far fa-heart"
+                    data-name="Classic Mojito"
+                  ></i
+                  ><button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img" src="pinacolada.jpg" alt="Pina Colada" />
+            <div class="card-content">
+              <h3>Pina Colada</h3>
+              <p>Coconut cream, pineapple juice, white rum</p>
+              <div class="card-actions-row">
+                <div class="price-badge">
+                  <span class="price">₦7000</span
+                  ><span
+                    class="availability-badge"
+                    style="background: #e74c3c; color: #fff"
+                    >Out of Stock</span
+                  >
+                </div>
+                <div class="action-icons">
+                  <i class="fav-icon far fa-heart" data-name="Pina Colada"></i
+                  ><button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img" src="maargaritas.jpg" alt="Sunset Spritz" />
+            <div class="card-content">
+              <h3>Magaritas</h3>
+              <p>Aperol, prosecco, soda, orange slice</p>
+              <div class="card-actions-row">
+                <div class="price-badge">
+                  <span class="price">₦6800</span
+                  ><span
+                    class="availability-badge"
+                    style="background: #2ecc71; color: #000"
+                    >Available</span
+                  >
+                </div>
+                <div class="action-icons">
+                  <i class="fav-icon far fa-heart" data-name="Sunset Spritz"></i
+                  ><button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img" src="rain.jpg" alt="Virgin Berry Cooler" />
+            <div class="card-content">
+              <h3>Virgin Berry Cooler</h3>
+              <p>Mixed berries, mint, lemonade (no alcohol)</p>
+              <div class="card-actions-row">
+                <div class="price-badge">
+                  <span class="price">₦4200</span
+                  ><span
+                    class="availability-badge"
+                    style="background: #2ecc71; color: #000"
+                    >Available</span
+                  >
+                </div>
+                <div class="action-icons">
+                  <i
+                    class="fav-icon far fa-heart"
+                    data-name="Virgin Berry Cooler"
+                  ></i
+                  ><button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img"
+              src="jackfrosty.jpg"
+              alt="Tropical Mocktail"
+            />
+            <div class="card-content">
+              <h3>Jack Frosty</h3>
+              <p>Mango, passionfruit, coconut water, lime</p>
+              <div class="card-actions-row">
+                <div class="price-badge">
+                  <span class="price">₦4500</span
+                  ><span
+                    class="availability-badge"
+                    style="background: #2ecc71; color: #000"
+                    >Available</span
+                  >
+                </div>
+                <div class="action-icons">
+                  <i
+                    class="fav-icon far fa-heart"
+                    data-name="Tropical Mocktail"
+                  ></i
+                  ><button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-image">
+        <img id="aboutImage" src="hero5.png" alt="Restaurant" />
+      </div>
+
+      <div class="about-content">
+        <span>About Us</span>
+        <h2>Vibes O'clock Resturant</h2>
+        <p>
+          Vibe's O'clock Restaurant combines delicious cuisine, premium
+          ambiance, and unforgettable nightlife experiences. From intimate
+          dinners to weekend vibes, every moment here is crafted to leave
+          lasting memories.
+        </p>
+        <br />
+        <p>
+          Welcome to Vibe’s O’clock Restaurant, where great food meets great
+          vibes. We are committed to providing a memorable dining experience
+          through delicious meals, exceptional service, and a warm, stylish
+          atmosphere. <br />Whether you’re joining us for a casual meal, a
+          celebration, or a night out with friends, our goal is to make every
+          visit special. At Vibe’s O’clock, we believe every moment deserves
+          good food, good company, and unforgettable memories. Your perfect
+          dining experience starts here.
+        </p>
+        <br />
+        <!--  <a href="https://www.homeandawayfoods.com/" class="btn" target="_blank"
+          >Discover More</a
+        > -->
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+      <div class="section-title">
+        <span>Moments</span>
+        <h2>Our Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="hero6.png" alt="Plated dish" />
+        </div>
+        <div class="gallery-item">
+          <img src="hero4.png" alt="Interior" />
+        </div>
+        <div class="gallery-item">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/MOrZemSB7g0?autoplay=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section class="experiences" id="experiences">
+      <div class="section-title">
+        <span>More Than a Meal</span>
+        <h2>Experiences We Offer</h2>
+      </div>
+      <div class="exp-grid">
+        <div class="exp-card">
+          <img src="couplenight.jpg" />
+          <div class="exp-overlay"><h3>❤️ Couples Night</h3></div>
+        </div>
+        <div class="exp-card">
+          <img src="sipandpaint.jpg" />
+          <div class="exp-overlay"><h3>🎨 Sip & Paint</h3></div>
+        </div>
+        <div class="exp-card">
+          <img src="privatenight.jpg" />
+          <div class="exp-overlay"><h3>🍽️ Dinner Night</h3></div>
+        </div>
+        <div class="exp-card">
+          <img src="private.jpg" />
+          <div class="exp-overlay"><h3>🥂 Private Dinner</h3></div>
+        </div>
+        <div class="exp-card">
+          <img src="buff.jpg" />
+          <div class="exp-overlay"><h3>🎉 Buffets Party</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials & Comment -->
+    <section class="testimonials" id="testimonials">
+      <div class="section-title">
+        <span>Guest Voices</span>
+        <h2>What Our Locals Say</h2>
+      </div>
+      <div class="testimonial-scroll" id="testimonialScroll"></div>
+    </section>
+
+    <section class="comment-section" id="comments">
+      <h2>Leave a Comment</h2>
+      <p>Share your experience – your review will appear above!</p>
+      <form class="comment-form" id="commentForm">
+        <input type="text" id="commentName" placeholder="Your Name" required />
+        <textarea
+          id="commentText"
+          placeholder="Write your review..."
+          rows="3"
+          required
+        ></textarea>
+        <button type="submit" class="btn">Post Comment</button>
+      </form>
+    </section>
+
+    <!-- Contact + FAQ -->
+    <section class="contact-faq-section" id="contact-faq">
+      <div class="contact-left">
+        <h2><i class="fas fa-address-card"></i> Get in Touch</h2>
+        <div class="contact-detail-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@vibesoclock.com">info@vibesoclock.com</a>
+        </div>
+        <div class="contact-detail-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+2348137472859">+234 813 747 2859</a>
+        </div>
+        <div class="contact-detail-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>123 Vibe Avenue, Lagos, Nigeria</span>
+        </div>
+        <div class="contact-detail-item">
+          <i class="far fa-clock"></i> <span>Mon–Sun: 11AM – 10PM</span>
+        </div>
+      </div>
+      <div class="faq-right">
+        <h2><i class="fas fa-question-circle"></i> Frequently Asked</h2>
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you offer vegetarian options? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, we have a variety of vegetarian and vegan dishes clearly marked
+            on our menu.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I make a reservation online? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Absolutely! Click the "Book a Table" button on our site to reserve
+            your spot.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you cater for private events? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, we offer private dining and event catering. Contact us for a
+            custom quote.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>VIBES O'CLOCK</h4>
+          <p>
+            Luxury dining & nightlife experience in the heart of Lagos. Premium
+            meals, signature cocktails, and unforgettable memories.
+          </p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#all-sections">Full Menu</a>
+          <a href="#drinks-section">Drinks</a>
+          <a href="#about">About Us</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#experiences">Experiences</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact-faq">Contact</a>
+          <a href="https://voc#####" target="_blank">Book a Table</a>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <p>
+            <i
+              class="fas fa-map-marker-alt"
+              style="color: #d4a017; width: 25px"
+            ></i>
+            123 Vibe Avenue, Lagos, Nigeria
+          </p>
+          <p>
+            <i class="fas fa-phone-alt" style="color: #d4a017; width: 25px"></i>
+            <a href="tel:+2348137472859">+234 813 747 2859</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope" style="color: #d4a017; width: 25px"></i>
+            <a href="mailto:info@vibesoclock.com">info@vibesoclock.com</a>
+          </p>
+          <p>
+            <i class="far fa-clock" style="color: #d4a017; width: 25px"></i>
+            Mon–Sun: 11:00 – 22:00
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Vibe's O'clock Restaurant. All rights reserved. | Designed for
+          premium dining experience.
+        </p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
