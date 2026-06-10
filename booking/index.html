@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Book a Table | Vibe's O'clock Restaurant</title>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='50%' font-size='70' text-anchor='middle' dy='.35em' fill='%23D4A017'>🍽️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ========== RESERVATION SECTION STYLES (matches your live site) ========== */
+        .reservation-section {
+            padding: 120px 5% 80px;
+            background: #0B0B0B;
+            min-height: 100vh;
+        }
+        .booking-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1A1A1A;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .booking-container h1 {
+            color: #D4A017;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .booking-container > p {
+            text-align: center;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #D4A017;
+        }
+        .form-group label .required {
+            color: #e74c3c;
+            margin-left: 3px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            background: #0B0B0B;
+            color: #fff;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: 1px solid #D4A017;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .form-row .form-group {
+            flex: 1;
+            min-width: 180px;
+        }
+        .submit-btn {
+            width: 100%;
+            background: #D4A017;
+            color: #000;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background: #c29214;
+            transform: translateY(-2px);
+        }
+        .booking-info {
+            margin-top: 30px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #aaa;
+            font-size: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+        .booking-info i {
+            color: #D4A017;
+            margin-right: 8px;
+        }
+        .booking-info a {
+            color: #D4A017;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .reservation-section {
+                padding: 100px 5% 60px;
+            }
+            .booking-container {
+                padding: 25px;
+            }
+            .booking-container h1 {
+                font-size: 1.8rem;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .booking-info {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23D4A017' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== RESERVATION / BOOKING TABLE SECTION ONLY ========== -->
+    <section class="reservation-section">
+        <div class="booking-container">
+            <h1>Reserve Your Table</h1>
+            <p>Experience luxury dining – book your spot now</p>
+
+            <form id="bookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" placeholder="e.g., Chidi O." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" placeholder="+234 812 345 6789" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Guests <span class="required">*</span></label>
+                        <select id="guests" required>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8 Guests</option>
+                            <option value="9">9 Guests</option>
+                            <option value="10">10 Guests</option>
+                            <option value="10+">10+ Guests</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Reservation Date <span class="required">*</span></label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Reservation Time <span class="required">*</span></label>
+                        <select id="time" required>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                            <option value="22:00">10:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Special Requests / Notes</label>
+                    <textarea id="requests" rows="3" placeholder="Dietary preferences, celebration notes, etc."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Confirm Reservation</button>
+            </form>
+
+            <div class="booking-info">
+                <span><i class="fas fa-phone-alt"></i> <a href="tel:+2348137472859">+234 813 747 2859</a></span>
+                <span><i class="far fa-clock"></i> Mon–Sun: 11AM – 10PM</span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:info@vibesoclock.com">info@vibesoclock.com</a></span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // ========== RESERVATION FORM HANDLER ==========
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('fullName').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const guests = document.getElementById('guests').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const requests = document.getElementById('requests').value.trim();
+            
+            // Validate required fields
+            if (!name || !phone || !date) {
+                alert('Please fill in all required fields (Name, Phone, and Date).');
+                return;
+            }
+            
+            // Format date for display
+            let formattedDate = date;
+            if (date) {
+                const dateObj = new Date(date);
+                formattedDate = dateObj.toLocaleDateString('en-GB', {
+                    weekday: 'short',
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+            }
+            
+            // Build professional WhatsApp message
+            let message = `📅 *NEW TABLE RESERVATION* 📅\n\n`;
+            message += `*Guest:* ${name}\n`;
+            message += `*Phone:* ${phone}\n`;
+            if (email) message += `*Email:* ${email}\n`;
+            message += `*Guests:* ${guests}\n`;
+            message += `*Date:* ${formattedDate}\n`;
+            message += `*Time:* ${time}\n`;
+            if (requests) message += `*Requests:* ${requests}\n`;
+            message += `\n━━━━━━━━━━━━━━━━━━━━\n`;
+            message += `📍 *Vibe's O'clock Restaurant*\n`;
+            message += `Please confirm availability.`;
+            
+            // Send to WhatsApp
+            const whatsappUrl = `https://wa.me/2348137472859?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Show confirmation
+            alert('Your reservation request has been sent via WhatsApp. We will confirm shortly.');
+        });
+        
+        // Set minimum date to today (so past dates cannot be selected)
+        const today = new Date().toISOString().split('T')[0];
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            dateInput.setAttribute('min', today);
+        }
+    </script>
+</body>
+</html>
